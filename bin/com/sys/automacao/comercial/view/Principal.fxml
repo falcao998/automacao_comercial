@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="borderPanePrincipal" layoutX="-2.0" prefHeight="637.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.PrincipalViewController">
+	<top>
+    	<MenuBar BorderPane.alignment="CENTER">
+        	<menus>
+            	<Menu mnemonicParsing="false" text="Início">
+              		<items>
+                		<MenuItem mnemonicParsing="false" onAction="#hadlerTrocarUsuario" text="Trocar Usúario" />
+                		<MenuItem mnemonicParsing="false" onAction="#handleSair" text="Fechar" />
+              		</items>
+            	</Menu>
+            	<Menu mnemonicParsing="false" text="Cadastro">
+              		<items>
+                		<MenuItem mnemonicParsing="false" text="Produto" />
+              		</items>
+            	</Menu>
+            	<Menu mnemonicParsing="false" text="Venda">
+              		<items>
+                		<MenuItem mnemonicParsing="false" text="Fiscal" />
+                		<MenuItem mnemonicParsing="false" text="Não Fiscal" />
+              		</items>
+            	</Menu>
+            	<Menu mnemonicParsing="false" text="Relatório">
+              		<items>
+	                	<MenuItem mnemonicParsing="false" text="Vendas" />
+    	            	<MenuItem mnemonicParsing="false" text="Cadastro" />
+        		    </items>
+            	</Menu>
+            	<Menu mnemonicParsing="false" text="Configuração">
+              		<items>
+                		<MenuItem mnemonicParsing="false" text="About" />
+              		</items>
+            	</Menu>
+          	</menus>
+    	</MenuBar>
+	</top>
+</BorderPane>

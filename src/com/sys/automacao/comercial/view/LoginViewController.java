@@ -8,6 +8,8 @@ import com.sys.automacao.comercial.util.ExchangeStage;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.StageStyle;
 
@@ -52,13 +54,19 @@ public class LoginViewController {
 	}
 	
 	@FXML
-	public void handleDigitarUsuario() {
-		testeUsuarioEmpty(true);
+	public void handleDigitarUsuario(KeyEvent e) {
+		if(e.getCode().equals(KeyCode.ENTER))
+	    	handleLogin();
+		else
+			testeUsuarioEmpty(true);
 	}
 	
 	@FXML
-	public void handleDigitarSenha() {
-		testeSenhaEmpty(true);
+	public void handleDigitarSenha(KeyEvent e) {
+		if(e.getCode().equals(KeyCode.ENTER))
+	    	handleLogin();
+		else
+			testeSenhaEmpty(true);
 	}
 	
 	public void sucessLogin() {

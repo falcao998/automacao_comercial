@@ -4,19 +4,18 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.sys.automacao.comercial.dao.service.UsuarioDaoService;
 import com.sys.automacao.comercial.model.Usuario;
-//import com.sys.automacao.comercial.util.ExchangeStage;
+import com.sys.automacao.comercial.util.ExchangeStage;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class LoginViewController {
 	
 	private UsuarioDaoService service = new UsuarioDaoService();
 	
-//	private ExchangeStage exchangeStage;
+	private ExchangeStage exchangeStage = new ExchangeStage();
 	
 	@FXML
 	private AnchorPane anchorPaneLogin;
@@ -38,17 +37,16 @@ public class LoginViewController {
 	
 	@FXML
 	public void handleSair() {
-		Stage stage = (Stage)anchorPaneLogin.getScene().getWindow();
-		stage.close();
+		System.exit(0);
 	}
 	
 	@FXML
 	public void handleLogin() {
 		if (testeEmptyUsuarioSenha()) {
-			/*Usuario usuario = service.loginAtivo(tfUsuario.getText(), pfSenha.getText());
+			Usuario usuario = service.loginAtivo(tfUsuario.getText(), pfSenha.getText());
 			if (usuario == null)
 				showMenssagemError();
-			else*/
+			else
 				sucessLogin();
 		}
 	}
@@ -64,11 +62,12 @@ public class LoginViewController {
 	}
 	
 	public void sucessLogin() {
-		System.out.println(service.find(1).getNome());
+		exchangeStage.exchange("../view/Principal.fxml", StageStyle.UNDECORATED, anchorPaneLogin, true);
 	}
 	
 	private boolean testeUsuarioEmpty(boolean teste) {
 		lUsuarioEmpty.setVisible(false);
+		hideMenssagemError();
 		if (tfUsuario.getText().trim().isEmpty()) {
 			teste = false;
 			lUsuarioEmpty.setVisible(true);
@@ -78,6 +77,7 @@ public class LoginViewController {
 	
 	private boolean testeSenhaEmpty(boolean teste) {
 		lSenhaEmpty.setVisible(false);
+		hideMenssagemError();
 		if (pfSenha.getText().trim().isEmpty()) {
 			teste = false;
 			lSenhaEmpty.setVisible(true);
@@ -88,7 +88,7 @@ public class LoginViewController {
 	private boolean testeEmptyUsuarioSenha() {
 		boolean teste = true;
 		
-		lUsuarioError.setVisible(false);
+		hideMenssagemError();
 		
 		teste = testeUsuarioEmpty(teste);
 		teste = testeSenhaEmpty(teste);
@@ -98,6 +98,10 @@ public class LoginViewController {
 	
 	private void showMenssagemError() {
 		lUsuarioError.setVisible(true);
+	}
+	
+	private void hideMenssagemError() {
+		lUsuarioError.setVisible(false);
 	}
 	
 }

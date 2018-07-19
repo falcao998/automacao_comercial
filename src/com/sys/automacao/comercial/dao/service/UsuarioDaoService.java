@@ -9,6 +9,7 @@ public class UsuarioDaoService {
 	
 	public Usuario find(Integer id) {
 		Usuario usuario = repository.findById(id);
+		repository.closeEntity();
 		return usuario == null ? null : usuario;
 	}
 	
@@ -19,6 +20,7 @@ public class UsuarioDaoService {
 	
 	public Usuario loginAtivo(String user, String senha) {
 		Usuario usuario = repository.findByUserAndSenhaAndStatus(user,	senha, "ATIVO");
+		repository.closeEntity();
 		return usuario == null ? null : usuario;
 	}
 	

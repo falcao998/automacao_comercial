@@ -16,7 +16,7 @@ public class Usuario {
 	private Integer id;
 	@Column(name="NOME",nullable=false)
 	private String nome;
-	@Column(name="USUARIO",nullable=false)
+	@Column(name="USUARIO",nullable=false, unique=true)
 	private String user;
 	@Column(name="SENHA",nullable=false)
 	private String senha;

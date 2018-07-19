@@ -2,7 +2,7 @@ package com.sys.automacao.comercial.dao.repository;
 
 import javax.persistence.EntityManager;
 
-import com.sys.automacao.comercial.dao.ConexaoMySQLJPA;
+import com.sys.automacao.comercial.dao.JpaUtil;
 import com.sys.automacao.comercial.model.Usuario;
 
 public class UsuarioJpaDao {
@@ -11,7 +11,7 @@ public class UsuarioJpaDao {
 	
 	public UsuarioJpaDao() {
 		if (entity == null) {
-			entity = ConexaoMySQLJPA.getEntityManagerMySQL();
+			entity = JpaUtil.getEntityManager();
 		}
 	}
 	

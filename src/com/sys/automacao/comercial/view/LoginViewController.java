@@ -45,10 +45,10 @@ public class LoginViewController {
 	@FXML
 	public void handleLogin() {
 		if (testeEmptyUsuarioSenha()) {
-			Usuario usuario = service.loginAtivo(tfUsuario.getText(), pfSenha.getText());
+			/*Usuario usuario = service.loginAtivo(tfUsuario.getText(), pfSenha.getText());
 			if (usuario == null)
 				showMenssagemError();
-			else
+			else*/
 				sucessLogin();
 		}
 	}

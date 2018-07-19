@@ -40,7 +40,7 @@
     </AnchorPane>
       <ImageView fitHeight="281.0" fitWidth="361.0" layoutX="14.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <!-- <Image url="@/img/JavaFX.png" /> -->
+            <Image url="@/img/JavaFX.png" />
          </image>
       </ImageView>
   </children>

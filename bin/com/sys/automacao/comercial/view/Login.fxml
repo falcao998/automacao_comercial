@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPaneLogin" disable="false" onKeyPressed="#keyEnterAction" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color:#20120F;&#10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.LoginViewController">
+<AnchorPane fx:id="anchorPaneLogin" disable="false" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color:#20120F;&#10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.LoginViewController">
   <!-- TODO Add Nodes -->
   <children>
     <AnchorPane layoutX="383.0" layoutY="46.0" prefHeight="308.0" prefWidth="290.0" style="-fx-background-color:#9C2B27;">
@@ -16,12 +16,12 @@
          	<Label fx:id="lUsuarioError" layoutX="15.0" layoutY="53.0" style="-fx-text-fill: white;-fx-border-color:white; -fx-border-width: 1;-fx-border-style:solid;-fx-font-weight: bold;" text="Usuário INATIVO e/ou INEXISTENTE." visible="false" />
          	
          	<Label fx:id="lUsuarioEmpty" layoutX="47.0" layoutY="53.0" style="-fx-text-fill: white;-fx-border-color:white; -fx-border-width: 1;-fx-border-style:solid;-fx-font-weight: bold;" text="Campo Usuário está vazio." visible="false" />
-            <JFXTextField fx:id="tfUsuario" focusColor="WHITE" layoutX="27.0" layoutY="75.0" onKeyTyped="#handleDigitarUsuario" prefHeight="25.0" prefWidth="237.0" promptText="Usuário" style="-fx-prompt-text-fill: WHITE; -fx-text-fill: WHITE;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="tfUsuario" focusColor="WHITE" layoutX="27.0" layoutY="75.0" onKeyPressed="#handleDigitarUsuario" onKeyTyped="#handleDigitarUsuario" prefHeight="25.0" prefWidth="237.0" promptText="Usuário" style="-fx-prompt-text-fill: WHITE; -fx-text-fill: WHITE;" unFocusColor="WHITE" />
             
             <Label fx:id="lSenhaEmpty" layoutX="52.0" layoutY="128.0" style="-fx-text-fill: white;-fx-border-color:white; -fx-border-width: 1;-fx-border-style:solid;-fx-font-weight: bold;" text="Campo Senha está vazio." visible="false" />
-            <JFXPasswordField fx:id="pfSenha" focusColor="WHITE" layoutX="27.0" layoutY="146.0" onKeyTyped="#handleDigitarSenha" prefHeight="25.0" prefWidth="237.0" promptText="Senha" style="-fx-prompt-text-fill: WHITE;-fx-text-fill: WHITE;" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="pfSenha" focusColor="WHITE" layoutX="27.0" layoutY="146.0" onKeyPressed="#handleDigitarSenha" onKeyTyped="#handleDigitarSenha" prefHeight="25.0" prefWidth="237.0" promptText="Senha" style="-fx-prompt-text-fill: WHITE;-fx-text-fill: WHITE;" unFocusColor="WHITE" />
             
-            <JFXButton layoutX="27.0" layoutY="207.0" onAction="#handleLogin" onKeyTyped="#keyEnterAction" prefHeight="25.0" prefWidth="237.0" style="-fx-background-color: #E45652;" text="ENTRAR" textFill="#ebe5e5">
+            <JFXButton layoutX="27.0" layoutY="207.0" onAction="#handleLogin" prefHeight="25.0" prefWidth="237.0" style="-fx-background-color: #E45652;" text="ENTRAR" textFill="#ebe5e5">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

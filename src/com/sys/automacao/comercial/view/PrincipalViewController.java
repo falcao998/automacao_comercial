@@ -23,11 +23,16 @@ public class PrincipalViewController {
 		sairTela();
 	}
 	
+	@FXML
+	public void hadlerCadastroUsuario() {
+		usuarioTela();
+	}
+	
 	public void sairTela() {
 		exchangeStage.exchange("../view/Login.fxml", StageStyle.UNDECORATED, borderPanePrincipal, false);
 	}
 	
 	public void usuarioTela() {
-		exchangeStage.exchange("../view/Usuario.fxml", StageStyle.DECORATED, borderPanePrincipal, false);
+		exchangeStage.exchange("../view/Usuario.fxml", StageStyle.DECORATED, false);
 	}
 }

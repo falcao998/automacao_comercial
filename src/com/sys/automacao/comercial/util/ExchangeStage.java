@@ -29,4 +29,20 @@ public class ExchangeStage {
 			stage.show();
 		}catch(IOException e) {}
 	}
+	
+	public void exchange(String screenName, StageStyle style, boolean maximezed) {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(screenName));
+			Parent parent = fxmlLoader.load();
+			Scene scene = new Scene(parent);
+			Stage stage = new Stage(style);
+			stage.setScene(scene);
+			stage.centerOnScreen();
+			if(maximezed) {
+				stage.setHeight(Screen.getPrimary().getVisualBounds().getHeight());
+				stage.setWidth(Screen.getPrimary().getVisualBounds().getWidth());
+			}
+			stage.show();
+		}catch(IOException e) {}
+	}
 }

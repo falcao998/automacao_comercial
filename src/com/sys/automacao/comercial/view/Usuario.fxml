@@ -8,7 +8,10 @@
 
 <AnchorPane prefHeight="525.0" prefWidth="717.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
    <children>
+
       <JFXTextField layoutX="51.0" layoutY="115.0" />
+      
+      <Label text="Matricula*"/>
       <JFXTextField layoutX="48.0" layoutY="212.0" />
       <JFXTextField layoutX="234.0" layoutY="115.0" />
       <JFXComboBox layoutX="239.0" layoutY="221.0" prefHeight="25.0" prefWidth="136.0" />

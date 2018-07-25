@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="525.0" prefWidth="717.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="525.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
 
-      <JFXTextField layoutX="51.0" layoutY="115.0" />
+      <Label layoutX="51.0" layoutY="31.0" text="Matricula*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="idMatricula" layoutX="51.0" layoutY="45.0" prefHeight="25.0" prefWidth="187.0" />
       
-      <Label text="Matricula*"/>
-      <JFXTextField layoutX="48.0" layoutY="212.0" />
-      <JFXTextField layoutX="234.0" layoutY="115.0" />
-      <JFXComboBox layoutX="239.0" layoutY="221.0" prefHeight="25.0" prefWidth="136.0" />
-      <JFXComboBox layoutX="428.0" layoutY="215.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="266.0" layoutY="29.0" text="Nome*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="idNome" layoutX="266.0" layoutY="45.0" prefHeight="25.0" prefWidth="433.0" />
+      
+      <Label layoutX="51.0" layoutY="101.0" text="Senha*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="idSenha" layoutX="51.0" layoutY="118.0" prefHeight="25.0" prefWidth="187.0" />
+      
+      <Label layoutX="266.0" layoutY="101.0" text="E-mail*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="idEmail" layoutX="266.0" layoutY="117.0" prefHeight="25.0" prefWidth="433.0" />
+      
+      <Label layoutX="52.0" layoutY="171.0" text="Status*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="idStatus" layoutX="51.0" layoutY="191.0" prefHeight="25.0" prefWidth="187.0" />
+
+      <Label layoutX="266.0" layoutY="171.0" text="Nivel*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="idNivel" layoutX="266.0" layoutY="191.0" prefHeight="25.0" prefWidth="180.0" />
+      
    </children>
 </AnchorPane>

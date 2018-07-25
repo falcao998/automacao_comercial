@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="525.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="383.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
 
       <Label layoutX="51.0" layoutY="31.0" text="Matricula*">
@@ -50,7 +50,10 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="idNivel" layoutX="266.0" layoutY="191.0" prefHeight="25.0" prefWidth="180.0" />
+      <JFXComboBox fx:id="idNivel" layoutX="266.0" layoutY="191.0" prefHeight="25.0" prefWidth="236.0" />
+      
+      <JFXButton fx:id="idSalvar" layoutX="145.0" layoutY="294.0" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 1; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SALVAR" />
+      <JFXButton fx:id="idSair" layoutX="384.0" layoutY="294.0" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 1; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SAIR" />
       
    </children>
 </AnchorPane>

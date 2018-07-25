@@ -13,18 +13,18 @@ public class UsuarioDaoService {
 		return usuario == null ? null : usuario;
 	}
 	
-	public Usuario login(String user, String senha) {
-		Usuario usuario = repository.findByUserAndSenha(user,senha);
+	public Usuario login(String matricula, String senha) {
+		Usuario usuario = repository.findByMatriculaAndSenha(matricula,senha);
 		return usuario == null ? null : usuario;
 	}
 	
-	public Usuario loginAtivo(String user, String senha) {
-		Usuario usuario = repository.findByUserAndSenhaAndStatus(user,	senha, "ATIVO");
+	public Usuario loginAtivo(String matricula, String senha) {
+		Usuario usuario = repository.findByMatriculaAndSenhaAndStatus(matricula,	senha, "ATIVO");
 		repository.closeEntity();
 		return usuario == null ? null : usuario;
 	}
 	
-	public Usuario loginInativo(String user, String senha) {
-		return repository.findByUserAndSenhaAndStatus(user,	senha, "INATIVO");
+	public Usuario loginInativo(String matricula, String senha) {
+		return repository.findByMatriculaAndSenhaAndStatus(matricula,	senha, "INATIVO");
 	}
 }

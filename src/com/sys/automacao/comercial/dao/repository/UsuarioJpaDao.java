@@ -19,6 +19,15 @@ public class UsuarioJpaDao {
 		return entity.find(Usuario.class, id);
 	}
 	
+	public boolean save(Usuario usuario) {
+		try {
+			entity.persist(usuario);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
 	public Usuario findByMatriculaAndSenha(String matricula, String senha) {
 		return null;
 	}

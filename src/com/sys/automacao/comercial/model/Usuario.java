@@ -27,7 +27,15 @@ public class Usuario {
 	@Column(name="NIVEL",nullable=false)
 	private String nivel;
 	
-	
+	public Usuario(String nome, String matricula, String senha, String email, String status, String nivel) {
+		super();
+		this.nome = nome;
+		this.matricula = matricula;
+		this.senha = senha;
+		this.email = email;
+		this.status = status;
+		this.nivel = nivel;
+	}
 	public Integer getId() {
 		return id;
 	}

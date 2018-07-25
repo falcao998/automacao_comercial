@@ -16,12 +16,16 @@ public class Usuario {
 	private Integer id;
 	@Column(name="NOME",nullable=false)
 	private String nome;
-	@Column(name="USUARIO",nullable=false, unique=true)
-	private String user;
+	@Column(name="MATRICULA",nullable=false, unique=true)
+	private String matricula;
 	@Column(name="SENHA",nullable=false)
 	private String senha;
+	@Column(name="EMAIL",nullable=false)
+	private String email;
 	@Column(name="STATUS",nullable=false)
 	private String status;
+	@Column(name="NIVEL",nullable=false)
+	private String nivel;
 	
 	
 	public Integer getId() {
@@ -32,12 +36,6 @@ public class Usuario {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	public String getUser() {
-		return user;
-	}
-	public void setUser(String user) {
-		this.user = user;
 	}
 	public String getSenha() {
 		return senha;
@@ -51,5 +49,21 @@ public class Usuario {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getNivel() {
+		return nivel;
+	}
+	public void setNivel(String nivel) {
+		this.nivel = nivel;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	
 	
 }

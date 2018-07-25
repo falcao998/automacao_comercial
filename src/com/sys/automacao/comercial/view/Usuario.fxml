@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import com.jfoenix.controls.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="383.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" prefHeight="383.0" prefWidth="717.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.UsuarioViewController">
    <children>
 
       <Label layoutX="51.0" layoutY="31.0" text="Matricula*">
@@ -52,8 +53,14 @@
       </Label>
       <JFXComboBox fx:id="idNivel" layoutX="266.0" layoutY="191.0" prefHeight="25.0" prefWidth="236.0" />
       
-      <JFXButton fx:id="idSalvar" layoutX="145.0" layoutY="294.0" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 1; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SALVAR" />
-      <JFXButton fx:id="idSair" layoutX="384.0" layoutY="294.0" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 1; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SAIR" />
+      <JFXButton fx:id="idSalvar" layoutX="140.0" layoutY="294.0" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SALVAR">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="idSair" layoutX="389.0" layoutY="294.0" onAction="#handleSair" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SAIR">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
       
    </children>
 </AnchorPane>

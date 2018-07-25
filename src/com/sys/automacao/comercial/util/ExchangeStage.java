@@ -43,4 +43,9 @@ public class ExchangeStage {
 			System.out.println(e.getMessage());
 		}
 	}
+	
+	public void closePanelIntern(Pane pane) {
+		Stage screen = (Stage)pane.getScene().getWindow();
+		screen.close();
+	}
 }

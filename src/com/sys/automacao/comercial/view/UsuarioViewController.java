@@ -1,17 +1,19 @@
 package com.sys.automacao.comercial.view;
 
+import com.sys.automacao.comercial.util.ExchangeStage;
+
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 public class UsuarioViewController {
+	
+	ExchangeStage exchangeStage = new ExchangeStage();
 	
 	@FXML
 	AnchorPane anchorPane;
 	
 	@FXML
 	public void handleSair() {
-		Stage screen = (Stage)anchorPane.getScene().getWindow();
-		screen.close();
+		exchangeStage.closePanelIntern(anchorPane);
 	}
 }

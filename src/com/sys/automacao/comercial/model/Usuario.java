@@ -79,5 +79,8 @@ public class Usuario {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
+	public String getMatricula() {
+		return matricula;
+	}
 	
 }

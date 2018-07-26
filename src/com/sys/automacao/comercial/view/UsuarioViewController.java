@@ -4,8 +4,10 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.sys.automacao.comercial.dao.service.UsuarioDaoService;
+import com.sys.automacao.comercial.model.StatusUsuarioEnum;
 import com.sys.automacao.comercial.util.ExchangeStage;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 
@@ -34,13 +36,18 @@ public class UsuarioViewController {
 	JFXComboBox cbNivel;
 	
 	@FXML
-	JFXComboBox cbStatus;
+	JFXComboBox<StatusUsuarioEnum> cbStatus;
 	
 	@FXML
 	JFXButton butSair;
 	
 	@FXML
 	JFXButton butSalvar;
+	
+	@FXML
+	public void initialize() {
+		cbStatus.setItems( FXCollections.observableArrayList( StatusUsuarioEnum.values()));
+	}
 	
 	@FXML
 	public void handleSair() {

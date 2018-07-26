@@ -17,7 +17,7 @@ public class UsuarioJpaDao {
 	}
 	
 	public List<Usuario> findAll() {
-        return entity.createQuery("FROM sys_usuario").getResultList();
+        return entity.createQuery("FROM Usuario").getResultList();
 	}
 	
 	public Usuario findById(int id) {

@@ -3,6 +3,7 @@ package com.sys.automacao.comercial.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,7 +13,7 @@ public class Usuario {
 
 	@Id
 	@Column(name="ID")
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name="NOME",nullable=false)
 	private String nome;
@@ -33,6 +34,7 @@ public class Usuario {
 	
 	public Usuario(String nome, String matricula, String senha, String email, String status, String nivel) {
 		super();
+		this.id = null;
 		this.nome = nome;
 		this.matricula = matricula;
 		this.senha = senha;

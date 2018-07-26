@@ -1,5 +1,7 @@
 package com.sys.automacao.comercial.dao.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
@@ -14,6 +16,10 @@ public class UsuarioJpaDao {
 		entity = JpaUtil.getEntityManager();
 	}
 	
+	public List<Usuario> findAll() {
+        return entity.createQuery("FROM sys_usuario").getResultList();
+	}
+	
 	public Usuario findById(int id) {
 		entity = JpaUtil.getEntityManager();
 		return entity.find(Usuario.class, id);
@@ -21,9 +27,13 @@ public class UsuarioJpaDao {
 	
 	public boolean save(Usuario usuario) {
 		try {
+			entity.getTransaction().begin();
 			entity.persist(usuario);
+			entity.getTransaction().commit();
 			return true;
 		} catch (Exception e) {
+			e.printStackTrace();
+            entity.getTransaction().rollback();
 			return false;
 		}
 	}

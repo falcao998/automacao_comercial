@@ -53,7 +53,7 @@
       </Label>
       <JFXComboBox fx:id="cbNivel" layoutX="266.0" layoutY="191.0" prefHeight="25.0" prefWidth="236.0" />
       
-      <JFXButton fx:id="butSalvar" layoutX="140.0" layoutY="294.0" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SALVAR">
+      <JFXButton fx:id="butSalvar" layoutX="140.0" layoutY="294.0" onAction="#handleSalvar" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SALVAR">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></JFXButton>

@@ -16,6 +16,7 @@ public class UsuarioJpaDao {
 		entity = JpaUtil.getEntityManager();
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<Usuario> findAll() {
         return entity.createQuery("FROM Usuario").getResultList();
 	}

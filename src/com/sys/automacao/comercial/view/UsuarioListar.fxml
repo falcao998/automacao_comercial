@@ -21,7 +21,7 @@
           			</cellValueFactory>
           		</TableColumn>
           		
-          		<TableColumn text="Nome" prefWidth="280">
+          		<TableColumn text="Nome" prefWidth="250">
           			<cellValueFactory><PropertyValueFactory property="nome" />
           			</cellValueFactory>
           		</TableColumn>
@@ -31,7 +31,7 @@
           			</cellValueFactory>
           		</TableColumn>
           		
-          		<TableColumn text="Status" prefWidth="70">
+          		<TableColumn text="Status" prefWidth="80">
           			<cellValueFactory><PropertyValueFactory property="status" />
           			</cellValueFactory>
           		</TableColumn>

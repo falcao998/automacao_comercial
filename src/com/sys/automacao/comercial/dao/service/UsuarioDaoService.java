@@ -16,11 +16,6 @@ public class UsuarioDaoService {
 	}
 	
 	public Usuario login(String matricula, String senha) {
-		Usuario usuario = repository.findByMatriculaAndSenha(matricula,senha);
-		return usuario == null ? null : usuario;
-	}
-	
-	public Usuario loginAtivo(String matricula, String senha) {
 		Usuario usuario = repository.findByMatriculaAndSenhaAndStatus(matricula,	senha, "ATIVO");
 		repository.closeEntity();
 		return usuario == null ? null : usuario;
@@ -33,6 +28,10 @@ public class UsuarioDaoService {
 	public boolean save(String matricula,String nome,String senha, String email, String status, String nivel) {
 		Usuario usuario = new Usuario(nome, matricula, senha, email, status, nivel);
 		return repository.save(usuario);
+	}
+	
+	public boolean remove(Integer id) {
+		return repository.delete(find(id));
 	}
 	
 	public List<Usuario> findAll() {

@@ -29,7 +29,7 @@ public class PrincipalViewController {
 	}
 	
 	public void sairTela() {
-		exchangeStage.exchange("../view/Login.fxml", StageStyle.UNDECORATED, borderPanePrincipal, false,"LOGIN");
+		exchangeStage.exchange("../view/Login.fxml", StageStyle.UNDECORATED, borderPanePrincipal, false, null);
 	}
 	
 	public void usuarioTela() {

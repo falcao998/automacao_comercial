@@ -9,7 +9,7 @@ public class JpaUtil {
 
 	private static EntityManagerFactory entityManagerFactory;
 	private static final String PERSISTENCE_UNIT_MYSQL = "com.sys.automacaocomercial.jpa.mysql";
-	private static ThreadLocal<EntityManager> threadEntityManager = new ThreadLocal<EntityManager>();
+	private static ThreadLocal<EntityManager> threadEntityManager = new ThreadLocal<>();
 
 	private JpaUtil() {
 		throw new IllegalStateException("Classe Utilitária.");

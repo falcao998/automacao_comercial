@@ -74,6 +74,7 @@ public class UsuarioListarViewController {
 	
 	@FXML
 	public void handleDeletar() {
-		System.out.println(tableView.getSelectionModel().getSelectedItem().getId());
+		service.remove(tableView.getSelectionModel().getSelectedItem().getId());
+		tableView.refresh();
 	}
 }

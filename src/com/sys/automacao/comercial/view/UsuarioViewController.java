@@ -6,11 +6,9 @@ import com.jfoenix.controls.JFXTextField;
 import com.sys.automacao.comercial.dao.service.UsuarioDaoService;
 import com.sys.automacao.comercial.model.NivelUsuarioEnum;
 import com.sys.automacao.comercial.model.StatusUsuarioEnum;
-import com.sys.automacao.comercial.model.Usuario;
 import com.sys.automacao.comercial.util.ExchangeStage;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 

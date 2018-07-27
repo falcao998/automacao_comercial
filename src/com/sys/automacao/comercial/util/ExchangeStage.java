@@ -28,7 +28,9 @@ public class ExchangeStage {
 				stage.setWidth(Screen.getPrimary().getVisualBounds().getWidth());
 			}
 			stage.show();
-		}catch(IOException e) {}
+		}catch(IOException e) {
+			// Not used
+		}
 	}
 	
 	public void exchange(String screenName, StageStyle style, String title) {

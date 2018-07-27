@@ -39,8 +39,17 @@ public class UsuarioJpaDao {
 		}
 	}
 	
-	public Usuario findByMatriculaAndSenha(String matricula, String senha) {
-		return null;
+	public boolean delete(Usuario usuario) {
+		try {
+			entity.getTransaction().begin();
+			entity.remove(usuario);
+			entity.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+            entity.getTransaction().rollback();
+			return false;
+		}
 	}
 	
 	public Usuario findByMatriculaAndSenhaAndStatus(String matricula, String senha, String status) {

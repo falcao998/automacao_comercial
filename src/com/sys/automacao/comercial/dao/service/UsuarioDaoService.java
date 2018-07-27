@@ -25,8 +25,8 @@ public class UsuarioDaoService {
 		return repository.findByMatriculaAndSenhaAndStatus(matricula,	senha, "INATIVO");
 	}
 	
-	public boolean save(String matricula,String nome,String senha, String email, String status, String nivel) {
-		Usuario usuario = new Usuario(nome, matricula, senha, email, status, nivel);
+	public boolean save(Integer id, String matricula,String nome,String senha, String email, String status, String nivel) {
+		Usuario usuario = new Usuario(id, nome, matricula, senha, email, status, nivel);
 		return repository.save(usuario);
 	}
 	

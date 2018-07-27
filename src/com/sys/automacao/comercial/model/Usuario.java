@@ -32,9 +32,9 @@ public class Usuario {
 		
 	}
 	
-	public Usuario(String nome, String matricula, String senha, String email, String status, String nivel) {
+	public Usuario(Integer id, String nome, String matricula, String senha, String email, String status, String nivel) {
 		super();
-		this.id = null;
+		this.id = id;
 		this.nome = nome;
 		this.matricula = matricula;
 		this.senha = senha;

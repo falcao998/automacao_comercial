@@ -58,6 +58,6 @@ public class UsuarioViewController {
 	
 	@FXML
 	public void handleSalvar() {
-		service.save(tfMatricula.getText(), tfNome.getText(), tfSenha.getText(), tfEmail.getText(), cbStatus.getValue().toString(), cbNivel.getValue().toString());
+		service.save(null, tfMatricula.getText(), tfNome.getText(), tfSenha.getText(), tfEmail.getText(), cbStatus.getValue().toString(), cbNivel.getValue().toString());
 	}
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,41 +8,64 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.collections.*?> 
-<?import com.sys.automacao.comercial.model.* ?> 
+<?import javafx.collections.*?>
+<?import com.sys.automacao.comercial.model.* ?>
 <?import javafx.scene.control.cell.PropertyValueFactory ?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="383.0" prefWidth="750.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.UsuarioListarViewController">
+<AnchorPane fx:id="anchorPane" prefHeight="512.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.UsuarioListarViewController">
 	<children>
+	
+		<AnchorPane prefHeight="50.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
+			<children>
+				<TextField layoutX="41.0" layoutY="10.0" prefHeight="30.0" prefWidth="515.0" />
+				<Button layoutX="573.8" layoutY="10.0" mnemonicParsing="false" onAction="#handleCadastrar" prefHeight="30.0" prefWidth="136.0" text="PESQUISAR">
+					<font>
+						<Font name="System Bold" size="13.0" />
+					</font>
+				</Button>
+			</children>
+		</AnchorPane>
 
-    	<TableView fx:id="tableView">
-     		<columns>
-          		<TableColumn fx:id="colMatricula"  text="Matrícula" prefWidth="75">
-          			<cellValueFactory><PropertyValueFactory property="matricula" />
-          			</cellValueFactory>
-          		</TableColumn>
-          		
-          		<TableColumn fx:id="colNome" text="Nome" prefWidth="250">
-          			<cellValueFactory><PropertyValueFactory property="nome" />
-          			</cellValueFactory>
-          		</TableColumn>
-          		
-          		<TableColumn fx:id="colEmail" text="Email" prefWidth="220">
-          			<cellValueFactory><PropertyValueFactory property="email" />
-          			</cellValueFactory>
-          		</TableColumn>
-          		
-          		<TableColumn fx:id="colStatus" text="Status" prefWidth="75">
-          			<cellValueFactory><PropertyValueFactory property="status" />
-          			</cellValueFactory>
-          		</TableColumn>
-          		
-          		<TableColumn fx:id="colNivel" text="Nível" prefWidth="130">
-          			<cellValueFactory><PropertyValueFactory property="nivel" />
-          			</cellValueFactory>
-          		</TableColumn>
-     		</columns>
+		<TableView fx:id="tableView" layoutY="51.0">
+			<columns>
+				<TableColumn fx:id="colId" editable="false" prefWidth="75" text="ID" visible="false" />
+
+				<TableColumn fx:id="colMatricula" editable="false" prefWidth="75" text="Matrícula" />
+
+				<TableColumn fx:id="colNome" editable="false" prefWidth="250" text="Nome" />
+
+				<TableColumn fx:id="colEmail" editable="false" prefWidth="220" text="Email" />
+
+				<TableColumn fx:id="colStatus" editable="false" prefWidth="75" text="Status" />
+
+				<TableColumn fx:id="colNivel" editable="false" prefWidth="130" text="Nível" />
+
+			</columns>
 		</TableView>
-      
+		<AnchorPane layoutY="399.0" prefHeight="134.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
+			<children>
+				<Button layoutX="41.2" layoutY="47.0" mnemonicParsing="false" onAction="#handleCadastrar" prefHeight="44.0" prefWidth="136.0" text="CADASTRAR">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="219.4" layoutY="47.0" mnemonicParsing="false" onAction="#handleAlterar" prefHeight="44.0" prefWidth="136.0" text="ALTERAR">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="396.6" layoutY="47.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="136.0" text="APAGAR">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="573.8" layoutY="47.0" mnemonicParsing="false" onAction="#handleSair" prefHeight="44.0" prefWidth="136.0" text="SAIR">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+			</children>
+		</AnchorPane>
+
 	</children>
 </AnchorPane>

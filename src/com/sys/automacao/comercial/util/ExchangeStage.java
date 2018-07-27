@@ -12,7 +12,7 @@ import javafx.stage.StageStyle;
 
 public class ExchangeStage {
 	
-	public void exchange(String screenName, StageStyle style, Pane pane, boolean maximezed) {
+	public void exchange(String screenName, StageStyle style, Pane pane, boolean maximezed, String title) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(screenName));
 			Parent parent = fxmlLoader.load();
@@ -20,6 +20,7 @@ public class ExchangeStage {
 			Stage login = (Stage)pane.getScene().getWindow();
 			login.close();
 			Stage stage = new Stage(style);
+			stage.setTitle(title);
 			stage.setScene(scene);
 			stage.centerOnScreen();
 			if(maximezed) {
@@ -30,12 +31,13 @@ public class ExchangeStage {
 		}catch(IOException e) {}
 	}
 	
-	public void exchange(String screenName, StageStyle style) {
+	public void exchange(String screenName, StageStyle style, String title) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(screenName));
 			Parent parent = fxmlLoader.load();
 			Scene scene = new Scene(parent);
 			Stage stage = new Stage(style);
+			stage.setTitle(title);
 			stage.setScene(scene);
 			stage.centerOnScreen();
 			stage.show();

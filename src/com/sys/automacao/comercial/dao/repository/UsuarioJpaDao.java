@@ -28,6 +28,9 @@ public class UsuarioJpaDao {
 	
 	public boolean save(Usuario usuario) {
 		try {
+			if (!entity.getTransaction().isActive()) {
+				entity = JpaUtil.getEntityManager();
+			}
 			entity.getTransaction().begin();
 			entity.persist(usuario);
 			entity.getTransaction().commit();
@@ -41,8 +44,11 @@ public class UsuarioJpaDao {
 	
 	public boolean delete(Usuario usuario) {
 		try {
+			if (!entity.getTransaction().isActive()) {
+				entity = JpaUtil.getEntityManager();
+			}
 			entity.getTransaction().begin();
-			entity.remove(usuario);
+			entity.remove(entity.merge(usuario));
 			entity.getTransaction().commit();
 			return true;
 		} catch (Exception e) {
@@ -62,6 +68,23 @@ public class UsuarioJpaDao {
 			query.setParameter("status", status);
 			
 			return query.getSingleResult();
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	public List<Usuario> searchList(String pesquisa) {
+		try {
+			entity = JpaUtil.getEntityManager();
+			String consulta = "SELECT c FROM Usuario c WHERE (LOWER(c.matricula) LIKE LOWER('%'||:pesquisa||'%')) OR"
+					+ " (LOWER(c.nivel) LIKE LOWER('%'||:pesquisa||'%')) OR"
+					+ " (LOWER(c.nome) LIKE LOWER('%'||:pesquisa||'%')) OR"
+					+ " (LOWER(c.email) LIKE LOWER('%'||:pesquisa||'%')) OR"
+					+ " (LOWER(c.status) LIKE LOWER('%'||:pesquisa||'%'))";
+			TypedQuery<Usuario> query = entity.createQuery(consulta, Usuario.class);
+			query.setParameter("pesquisa", pesquisa);
+			
+			return query.getResultList();
 		} catch (Exception e) {
 			return null;
 		}

@@ -37,4 +37,8 @@ public class UsuarioDaoService {
 	public List<Usuario> findAll() {
 		return repository.findAll();
 	}
+	
+	public List<Usuario> search(String pesquisa) {
+		return repository.searchList(pesquisa);
+	}
 }

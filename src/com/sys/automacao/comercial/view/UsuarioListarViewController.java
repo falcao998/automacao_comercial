@@ -1,5 +1,7 @@
 package com.sys.automacao.comercial.view;
 
+import java.util.List;
+
 import com.sys.automacao.comercial.dao.service.UsuarioDaoService;
 import com.sys.automacao.comercial.model.Usuario;
 import com.sys.automacao.comercial.util.ExchangeStage;
@@ -9,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.StageStyle;
@@ -17,7 +20,7 @@ public class UsuarioListarViewController {
 	
 	UsuarioDaoService service = new UsuarioDaoService();
 	
-	ObservableList<Usuario> data = FXCollections.observableArrayList(service.findAll());
+	ObservableList<Usuario> data;
 	
 	ExchangeStage exchange = new ExchangeStage();
 	
@@ -44,6 +47,9 @@ public class UsuarioListarViewController {
   		
   	@FXML
   	TableColumn<Usuario, String> colNivel;
+  	
+  	@FXML
+  	TextField textPesquisar;
 
 	
 	@FXML
@@ -54,7 +60,6 @@ public class UsuarioListarViewController {
 		colEmail.setCellValueFactory(new PropertyValueFactory<Usuario, String>("email"));
 		colStatus.setCellValueFactory(new PropertyValueFactory<Usuario, String>("status"));
 		colNivel.setCellValueFactory(new PropertyValueFactory<Usuario, String>("nivel"));
-		tableView.setItems(data);
 	}
 	
 	@FXML
@@ -77,4 +82,15 @@ public class UsuarioListarViewController {
 		service.remove(tableView.getSelectionModel().getSelectedItem().getId());
 		tableView.refresh();
 	}
+	
+	@FXML
+	public void handleSearch() {
+		preencherTable(textPesquisar.getText());
+	}
+	
+	public void preencherTable(String pesquisa) {
+		data = FXCollections.observableArrayList(service.search(pesquisa));
+		tableView.setItems(data);
+	}
+	
 }

@@ -17,8 +17,8 @@
 	
 		<AnchorPane prefHeight="50.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
 			<children>
-				<TextField layoutX="41.0" layoutY="10.0" prefHeight="30.0" prefWidth="515.0" />
-				<Button layoutX="573.8" layoutY="10.0" mnemonicParsing="false" onAction="#handleCadastrar" prefHeight="30.0" prefWidth="136.0" text="PESQUISAR">
+				<TextField fx:id="textPesquisar" layoutX="41.0" layoutY="10.0" prefHeight="30.0" prefWidth="515.0" />
+				<Button layoutX="573.8" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="136.0" text="PESQUISAR">
 					<font>
 						<Font name="System Bold" size="13.0" />
 					</font>

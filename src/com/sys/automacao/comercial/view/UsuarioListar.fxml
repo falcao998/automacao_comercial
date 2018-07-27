@@ -11,50 +11,36 @@
 <?import com.sys.automacao.comercial.model.* ?> 
 <?import javafx.scene.control.cell.PropertyValueFactory ?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="383.0" prefWidth="750.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.UsuarioViewController">
+<AnchorPane fx:id="anchorPane" prefHeight="383.0" prefWidth="750.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.UsuarioListarViewController">
 	<children>
 
     	<TableView fx:id="tableView">
      		<columns>
-          		<TableColumn text="Matrícula" prefWidth="80">
+          		<TableColumn fx:id="colMatricula"  text="Matrícula" prefWidth="75">
           			<cellValueFactory><PropertyValueFactory property="matricula" />
           			</cellValueFactory>
           		</TableColumn>
           		
-          		<TableColumn text="Nome" prefWidth="250">
+          		<TableColumn fx:id="colNome" text="Nome" prefWidth="250">
           			<cellValueFactory><PropertyValueFactory property="nome" />
           			</cellValueFactory>
           		</TableColumn>
           		
-          		<TableColumn text="Email" prefWidth="140">
+          		<TableColumn fx:id="colEmail" text="Email" prefWidth="220">
           			<cellValueFactory><PropertyValueFactory property="email" />
           			</cellValueFactory>
           		</TableColumn>
           		
-          		<TableColumn text="Status" prefWidth="80">
+          		<TableColumn fx:id="colStatus" text="Status" prefWidth="75">
           			<cellValueFactory><PropertyValueFactory property="status" />
           			</cellValueFactory>
           		</TableColumn>
           		
-          		<TableColumn text="Nível" prefWidth="130">
+          		<TableColumn fx:id="colNivel" text="Nível" prefWidth="130">
           			<cellValueFactory><PropertyValueFactory property="nivel" />
           			</cellValueFactory>
           		</TableColumn>
      		</columns>
-     		<items>
-    			<FXCollections fx:factory="observableArrayList">
-        			<Usuario nome="Felipe Souza C. dos Santos" matricula="00000001" senha="123456" 
-        			 email="felipesouza_analista@yahoo.com.br" status="ATIVO" nivel="ADMINSTRADOR"/>
-        			<Usuario nome="Pedro Coutinho Souza" matricula="00000002" senha="123456"
-        			 email="falcao998@gmail.com" status="ATIVO" nivel="ADMINSTRADOR"/>
-        			<Usuario nome="Thiago Souza de Souza" matricula="00000003" senha="123456"
-        			 email="thiago@yahoo.com.br" status="INATIVO" nivel="VENDEDOR"/>
-        			<Usuario nome="Cristiane Coutinho Souza" matricula="00000004" senha="123456"
-        			 email="cris@yahoo.com.br" status="EXCLUÍDO" nivel="RECURSOS_HUMANOS"/>
-        			<Usuario nome="Joselia Maria Souza C. dos Santos" matricula="00000005" senha="123456"
-        			 email="joselia@yahoo.com.br" status="ATIVO" nivel="GERENTE"/>
-			    </FXCollections>
-			</items>
 		</TableView>
       
 	</children>

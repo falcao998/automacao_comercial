@@ -51,7 +51,6 @@ public class UsuarioViewController {
 	public void initialize() {
 		cbStatus.setItems( FXCollections.observableArrayList( StatusUsuarioEnum.values()));
 		cbNivel.setItems( FXCollections.observableArrayList( NivelUsuarioEnum.values()));
-		ObservableList<Usuario> usuarios = FXCollections.observableArrayList(service.findAll());
 	}
 	
 	@FXML

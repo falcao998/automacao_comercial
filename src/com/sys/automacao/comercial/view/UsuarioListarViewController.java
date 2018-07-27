@@ -80,7 +80,7 @@ public class UsuarioListarViewController {
 	@FXML
 	public void handleDeletar() {
 		service.remove(tableView.getSelectionModel().getSelectedItem().getId());
-		tableView.refresh();
+		preencherTable("");
 	}
 	
 	@FXML

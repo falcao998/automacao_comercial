@@ -1,7 +1,5 @@
 package com.sys.automacao.comercial.view;
 
-import java.util.List;
-
 import com.sys.automacao.comercial.dao.service.UsuarioDaoService;
 import com.sys.automacao.comercial.model.Usuario;
 import com.sys.automacao.comercial.util.ExchangeStage;

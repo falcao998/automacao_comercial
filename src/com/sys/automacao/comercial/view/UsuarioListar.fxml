@@ -26,7 +26,7 @@
 			</children>
 		</AnchorPane>
 
-		<TableView fx:id="tableView" layoutY="51.0">
+		<TableView fx:id="tableView" prefHeight="392.0" layoutY="51.0">
 			<columns>
 				<TableColumn fx:id="colId" editable="false" prefWidth="75" text="ID" visible="false" />
 
@@ -42,24 +42,24 @@
 
 			</columns>
 		</TableView>
-		<AnchorPane layoutY="399.0" prefHeight="134.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
+		<AnchorPane layoutY="399.0" prefHeight="80.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
 			<children>
-				<Button layoutX="41.2" layoutY="47.0" mnemonicParsing="false" onAction="#handleCadastrar" prefHeight="44.0" prefWidth="136.0" text="CADASTRAR">
+				<Button layoutX="41.2" layoutY="18.0" mnemonicParsing="false" onAction="#handleCadastrar" prefHeight="44.0" prefWidth="136.0" text="CADASTRAR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>
 				</Button>
-				<Button layoutX="219.4" layoutY="47.0" mnemonicParsing="false" onAction="#handleAlterar" prefHeight="44.0" prefWidth="136.0" text="ALTERAR">
+				<Button layoutX="219.4" layoutY="18.0" mnemonicParsing="false" onAction="#handleAlterar" prefHeight="44.0" prefWidth="136.0" text="ALTERAR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>
 				</Button>
-				<Button layoutX="396.6" layoutY="47.0" mnemonicParsing="false" onAction="#handleDeletar" prefHeight="44.0" prefWidth="136.0" text="APAGAR">
+				<Button layoutX="396.6" layoutY="18.0" mnemonicParsing="false" onAction="#handleDeletar" prefHeight="44.0" prefWidth="136.0" text="APAGAR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>
 				</Button>
-				<Button layoutX="573.8" layoutY="47.0" mnemonicParsing="false" onAction="#handleSair" prefHeight="44.0" prefWidth="136.0" text="SAIR">
+				<Button layoutX="573.8" layoutY="18.0" mnemonicParsing="false" onAction="#handleSair" prefHeight="44.0" prefWidth="136.0" text="SAIR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>

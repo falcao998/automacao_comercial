@@ -1,5 +1,7 @@
 package com.sys.automacao.comercial.view;
 
+import javax.swing.JOptionPane;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -59,5 +61,7 @@ public class UsuarioViewController {
 	@FXML
 	public void handleSalvar() {
 		service.save(null, tfMatricula.getText(), tfNome.getText(), tfSenha.getText(), tfEmail.getText(), cbStatus.getValue().toString(), cbNivel.getValue().toString());
+		
+		exchangeStage.closePanelIntern(anchorPane);
 	}
 }

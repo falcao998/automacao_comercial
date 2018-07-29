@@ -72,13 +72,13 @@ public class UsuarioListarViewController {
 	
 	@FXML
 	public void handleAlterar() {
-		System.out.println(tableView.getSelectionModel().getSelectedItem().getId());
+		
 	}
 	
 	@FXML
 	public void handleDeletar() {
 		service.remove(tableView.getSelectionModel().getSelectedItem().getId());
-		preencherTable("");
+		preencherTable(textPesquisar.getText());
 	}
 	
 	@FXML

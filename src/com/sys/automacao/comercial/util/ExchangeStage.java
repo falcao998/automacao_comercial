@@ -48,6 +48,22 @@ public class ExchangeStage {
 		}
 	}
 	
+	public void exchange(String screenName, StageStyle style, String title, Object controller) {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(screenName));
+			fxmlLoader.setController(controller);
+			Parent parent = fxmlLoader.load();
+			Scene scene = new Scene(parent);
+			Stage stage = new Stage(style);
+			stage.setTitle(title);
+			stage.setScene(scene);
+			stage.centerOnScreen();
+			stage.show();
+		}catch(IOException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
 	public void closePanelIntern(Pane pane) {
 		Stage screen = (Stage)pane.getScene().getWindow();
 		screen.close();

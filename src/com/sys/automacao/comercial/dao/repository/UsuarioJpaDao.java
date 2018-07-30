@@ -32,7 +32,7 @@ public class UsuarioJpaDao {
 				entity = JpaUtil.getEntityManager();
 			}
 			entity.getTransaction().begin();
-			entity.persist(usuario);
+			entity.persist(entity.merge(usuario));
 			entity.getTransaction().commit();
 			return true;
 		} catch (Exception e) {

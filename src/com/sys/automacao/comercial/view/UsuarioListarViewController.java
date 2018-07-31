@@ -58,6 +58,10 @@ public class UsuarioListarViewController {
 		colEmail.setCellValueFactory(new PropertyValueFactory<Usuario, String>("email"));
 		colStatus.setCellValueFactory(new PropertyValueFactory<Usuario, String>("status"));
 		colNivel.setCellValueFactory(new PropertyValueFactory<Usuario, String>("nivel"));
+		tableView.setOnMouseClicked( event -> {
+			if( event.getClickCount() == 2 ) {
+				handleAlterar();
+		}});
 	}
 	
 	@FXML
@@ -90,6 +94,7 @@ public class UsuarioListarViewController {
 	public void preencherTable(String pesquisa) {
 		data = FXCollections.observableArrayList(service.search(pesquisa));
 		tableView.setItems(data);
+		tableView.refresh();
 	}
 	
 }

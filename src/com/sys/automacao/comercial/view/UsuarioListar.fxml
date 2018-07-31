@@ -26,7 +26,7 @@
 			</children>
 		</AnchorPane>
 
-		<TableView fx:id="tableView" prefHeight="392.0" layoutY="51.0">
+		<TableView fx:id="tableView" layoutY="51.0" prefHeight="392.0">
 			<columns>
 				<TableColumn fx:id="colId" editable="false" prefWidth="75" text="ID" visible="false" />
 

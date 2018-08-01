@@ -23,6 +23,18 @@ public class Cliente {
 	@Column(name="DATA_CADASTRO",nullable=false)
 	private LocalDateTime dataCadastro;
 	
+	@Column(name="TELEFONE_1")
+	private String telefone1;
+	
+	@Column(name="TELEFONE_2")
+	private String telefone2;
+	
+	@Column(name="TELEFONE_3")
+	private String telefone3;
+	
+	@Column(name="EMAIL")
+	private String email;
+	
 	/*
 	-	CPF
 	-	IDENTIDADE
@@ -43,10 +55,6 @@ public class Cliente {
 	-	IBGE
 	-	CRT CÓDIGO DE REGIME TRIBUTÁRIO
 	
-	-	TELEFONE 1
-	-	TELEFONE 2
-	- 	TELEFONE 3
-	-	EMAIL
 	-	SITE
 	-	LIMITE DE CRÉDITO
 	-	OBSERVAÇÕES

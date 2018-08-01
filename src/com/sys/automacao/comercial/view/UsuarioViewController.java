@@ -53,6 +53,9 @@ public class UsuarioViewController {
 	JFXButton butSalvar;
 	
 	@FXML
+	JFXButton butApagar;
+	
+	@FXML
 	public void initialize() {
 		cbStatus.setItems( FXCollections.observableArrayList( StatusUsuarioEnum.values()));
 		cbNivel.setItems( FXCollections.observableArrayList( NivelUsuarioEnum.values()));
@@ -64,7 +67,15 @@ public class UsuarioViewController {
 			tfEmail.setText(usuario.getEmail());
 			cbNivel.setValue(NivelUsuarioEnum.valueOf(usuario.getNivel()));
 			cbStatus.setValue(StatusUsuarioEnum.valueOf(usuario.getStatus()));
+			butApagar.setDisable(false);
+			
 		}
+	}
+	
+	@FXML
+	public void handleDeletar() {
+		service.remove(usuario.getId());
+		exchangeStage.closePanelIntern(anchorPane);
 	}
 	
 	@FXML

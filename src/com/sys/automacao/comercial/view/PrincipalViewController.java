@@ -29,10 +29,10 @@ public class PrincipalViewController {
 	}
 	
 	public void sairTela() {
-		exchangeStage.exchange("../view/Login.fxml", StageStyle.UNDECORATED, borderPanePrincipal, false, null);
+		exchangeStage.exchange("/com/sys/automacao/comercial/view/Login.fxml", StageStyle.UNDECORATED, borderPanePrincipal, false, null);
 	}
 	
 	public void usuarioTela() {
-		exchangeStage.exchange("../view/usuario/UsuarioListar.fxml", StageStyle.DECORATED,"CADASTRO DE USUÁRIO(S)");
+		exchangeStage.exchange("/com/sys/automacao/comercial/view/usuario/UsuarioListar.fxml", StageStyle.DECORATED,"CADASTRO DE USUÁRIO(S)");
 	}
 }

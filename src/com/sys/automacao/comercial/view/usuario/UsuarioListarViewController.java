@@ -71,12 +71,12 @@ public class UsuarioListarViewController {
 	
 	@FXML
 	public void handleCadastrar() {
-		exchange.exchange("../view/usuario/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO",new UsuarioViewController(null));
+		exchange.exchange("/com/sys/automacao/comercial/view/usuario/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO",new UsuarioViewController(null));
 	}
 	
 	@FXML
 	public void handleAlterar() {
-		exchange.exchange("../view/usuario/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO", 
+		exchange.exchange("/com/sys/automacao/comercial/view/usuario/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO", 
 						  new UsuarioViewController(tableView.getSelectionModel().getSelectedItem()));
 	}
 	

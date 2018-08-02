@@ -70,7 +70,7 @@ public class LoginViewController {
 	}
 	
 	public void sucessLogin() {
-		exchangeStage.exchange("../view/Principal.fxml", StageStyle.UNDECORATED, anchorPaneLogin, true, "SYS - AUTOMAÇÃO COMERCIAL");
+		exchangeStage.exchange("/com/sys/automacao/comercial/view/Principal.fxml", StageStyle.UNDECORATED, anchorPaneLogin, true, "SYS - AUTOMAÇÃO COMERCIAL");
 	}
 	
 	private boolean testeUsuarioEmpty(boolean teste) {

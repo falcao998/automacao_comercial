@@ -14,7 +14,7 @@ public class MainApplication extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("view/Login.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/sys/automacao/comercial/view/Login.fxml"));
 		Scene scene = new Scene(loader.load());
 		primaryStage.setScene(scene);
 		primaryStage.initStyle(StageStyle.UNDECORATED);

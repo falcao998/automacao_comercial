@@ -1,4 +1,4 @@
-package com.sys.automacao.comercial.view;
+package com.sys.automacao.comercial.view.usuario;
 
 import com.sys.automacao.comercial.dao.service.UsuarioDaoService;
 import com.sys.automacao.comercial.model.Usuario;
@@ -71,12 +71,12 @@ public class UsuarioListarViewController {
 	
 	@FXML
 	public void handleCadastrar() {
-		exchange.exchange("../view/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO",new UsuarioViewController(null));
+		exchange.exchange("../view/usuario/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO",new UsuarioViewController(null));
 	}
 	
 	@FXML
 	public void handleAlterar() {
-		exchange.exchange("../view/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO", 
+		exchange.exchange("../view/usuario/Usuario.fxml", StageStyle.DECORATED,"NOVO USUÁRIO", 
 						  new UsuarioViewController(tableView.getSelectionModel().getSelectedItem()));
 	}
 	

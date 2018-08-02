@@ -33,6 +33,6 @@ public class PrincipalViewController {
 	}
 	
 	public void usuarioTela() {
-		exchangeStage.exchange("../view/UsuarioListar.fxml", StageStyle.DECORATED,"CADASTRO DE USUÁRIO(S)");
+		exchangeStage.exchange("../view/usuario/UsuarioListar.fxml", StageStyle.DECORATED,"CADASTRO DE USUÁRIO(S)");
 	}
 }

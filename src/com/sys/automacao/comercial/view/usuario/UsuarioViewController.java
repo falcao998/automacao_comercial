@@ -1,4 +1,4 @@
-package com.sys.automacao.comercial.view;
+package com.sys.automacao.comercial.view.usuario;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;

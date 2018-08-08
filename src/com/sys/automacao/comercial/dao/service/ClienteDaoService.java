@@ -17,7 +17,13 @@ public class ClienteDaoService {
 		return cliente == null ? null : cliente;
 	}
 	
-	public boolean save(Integer id, String matricula,String nome,String senha, String email, String status, String nivel) {
+	public boolean save(Integer id, String codigo, String nome, LocalDateTime dataCadastro, String telefone1, String telefone2,
+			String telefone3, String email, String site, Double limiteCredito, String observacao,
+			String vendedorPreferencial, String codigoRegimeTributario, String ibge, byte[] fotoCLiente,
+			LocalDate dataNascimento, String cep, String endereco, String numero, String complemento, String bairro,
+			String cidade, String estado, boolean pessoaFIsica, String cpf, String identidade, String cnpj,
+			String inscricaoEstaual, String status) {
+		
 		Cliente cliente = new Cliente(id, codigo, nome, dataCadastro, telefone1, telefone2, telefone3, email, site,
 				limiteCredito, observacao, vendedorPreferencial, codigoRegimeTributario, ibge, fotoCLiente, dataNascimento,
 				cep, endereco, numero, complemento, bairro, cidade, estado, pessoaFIsica, cpf, identidade, cnpj, 

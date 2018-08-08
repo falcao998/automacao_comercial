@@ -75,7 +75,7 @@ public class ClienteListarViewController {
 	@FXML
 	public void handleDeletar() {
 		if(tableView.getSelectionModel().getSelectedItem() != null) {
-//			service.remove(tableView.getSelectionModel().getSelectedItem().getId());
+			service.remove(tableView.getSelectionModel().getSelectedItem().getId());
 			preencherTable(textPesquisar.getText());
 		}
 	}

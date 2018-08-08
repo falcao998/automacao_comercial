@@ -18,7 +18,7 @@ public class Cliente {
 	@Id
 	@Column(name="ID")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	
 	@Column(name="CODIGO",unique=true,nullable=false,length=8)
 	private String codigo;
@@ -109,7 +109,7 @@ public class Cliente {
 		
 	}
 	
-	public Cliente(Long id, String codigo, String nome, LocalDateTime dataCadastro, String telefone1, String telefone2,
+	public Cliente(Integer id, String codigo, String nome, LocalDateTime dataCadastro, String telefone1, String telefone2,
 			String telefone3, String email, String site, Double limiteCredito, String observacao,
 			String vendedorPreferencial, String codigoRegimeTributario, String ibge, byte[] fotoCLiente,
 			LocalDate dataNascimento, String cep, String endereco, String numero, String complemento, String bairro,
@@ -363,7 +363,7 @@ public class Cliente {
 		this.inscricaoEstaual = inscricaoEstaual;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 

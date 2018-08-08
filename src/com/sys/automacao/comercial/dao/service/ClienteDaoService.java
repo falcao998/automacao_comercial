@@ -1,5 +1,7 @@
 package com.sys.automacao.comercial.dao.service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.sys.automacao.comercial.dao.repository.ClienteJpaDao;
@@ -16,7 +18,10 @@ public class ClienteDaoService {
 	}
 	
 	public boolean save(Integer id, String matricula,String nome,String senha, String email, String status, String nivel) {
-		Cliente cliente = new Cliente();
+		Cliente cliente = new Cliente(id, codigo, nome, dataCadastro, telefone1, telefone2, telefone3, email, site,
+				limiteCredito, observacao, vendedorPreferencial, codigoRegimeTributario, ibge, fotoCLiente, dataNascimento,
+				cep, endereco, numero, complemento, bairro, cidade, estado, pessoaFIsica, cpf, identidade, cnpj, 
+				inscricaoEstaual, status);
 		return repository.save(cliente);
 	}
 	

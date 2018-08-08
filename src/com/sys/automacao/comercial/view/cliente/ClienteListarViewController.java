@@ -69,7 +69,7 @@ public class ClienteListarViewController {
 	@FXML
 	public void handleAlterar() {
 		if(tableView.getSelectionModel().getSelectedItem() != null)
-			exchange.exchange("/com/sys/automacao/comercial/view/cliente/Cliente.fxml", StageStyle.DECORATED,"NOVO CLIENTE", new ClienteViewController(tableView.getSelectionModel().getSelectedItem()));
+			exchange.exchange("/com/sys/automacao/comercial/view/cliente/Cliente.fxml", StageStyle.DECORATED,"NOVO CLIENTE", new ClienteViewController(service.find(tableView.getSelectionModel().getSelectedItem().getId())));
 	}
 	
 	@FXML

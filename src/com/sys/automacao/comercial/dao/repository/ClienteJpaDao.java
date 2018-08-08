@@ -57,4 +57,51 @@ public class ClienteJpaDao {
 		}
 	}
 	
+	public boolean save(Cliente cliente) {
+		try {
+			if (!entity.getTransaction().isActive()) {
+				entity = JpaUtil.getEntityManager();
+			}
+			entity.getTransaction().begin();
+			entity.persist(entity.merge(cliente));
+			entity.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+            entity.getTransaction().rollback();
+			return false;
+		}
+	}
+	
+	public boolean delete(Cliente cliente) {
+		try {
+			if (!entity.getTransaction().isActive()) {
+				entity = JpaUtil.getEntityManager();
+			}
+			entity.getTransaction().begin();
+			entity.remove(entity.merge(cliente));
+			entity.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+            entity.getTransaction().rollback();
+			return false;
+		}
+	}
+	
+	public Usuario findByMatriculaAndSenhaAndStatus(String matricula, String senha, String status) {
+		try {
+			entity = JpaUtil.getEntityManager();
+			String consulta = "select c from Usuario c where c.matricula = :matricula and c.senha = :senha and status = :status";
+			TypedQuery<Usuario> query = entity.createQuery(consulta, Usuario.class);
+			query.setParameter("matricula", matricula);
+			query.setParameter("senha", senha);
+			query.setParameter("status", status);
+			
+			return query.getSingleResult();
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
 }

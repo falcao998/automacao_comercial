@@ -12,13 +12,13 @@
 <?import com.sys.automacao.comercial.model.* ?>
 <?import javafx.scene.control.cell.PropertyValueFactory ?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="486.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.cliente.ClienteListarViewController">
+<AnchorPane fx:id="anchorPane" prefHeight="486.0" prefWidth="800.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sys.automacao.comercial.view.cliente.ClienteListarViewController">
 	<children>
 	
-		<AnchorPane prefHeight="50.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
+		<AnchorPane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #C0C0C0;">
 			<children>
-				<TextField fx:id="textPesquisar" layoutX="41.0" layoutY="10.0" prefHeight="30.0" prefWidth="515.0" />
-				<Button layoutX="573.8" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="136.0" text="PESQUISAR">
+				<TextField fx:id="textPesquisar" layoutX="41.0" layoutY="10.0" prefHeight="30.0" prefWidth="555.0" />
+				<Button layoutX="613.8" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="136.0" text="PESQUISAR">
 					<font>
 						<Font name="System Bold" size="13.0" />
 					</font>
@@ -30,36 +30,36 @@
 			<columns>
 				<TableColumn fx:id="colId" editable="false" prefWidth="75" text="ID" visible="false" />
 
-				<TableColumn fx:id="colCodigo" editable="false" prefWidth="85" text="Código" />
+				<TableColumn fx:id="colCodigo" editable="false" prefWidth="80" text="Código" />
 
-				<TableColumn fx:id="colNome" editable="false" prefWidth="257" text="Nome" />
+				<TableColumn fx:id="colNome" editable="false" prefWidth="267" text="Nome" />
 				
-				<TableColumn fx:id="colTelefone" editable="false" prefWidth="95" text="Telefone" />
+				<TableColumn fx:id="colTelefone" editable="false" prefWidth="135" text="Telefone" />
 
 				<TableColumn fx:id="colEmail" editable="false" prefWidth="240" text="Email" />
 
-				<TableColumn fx:id="colStatus" editable="false" prefWidth="75" text="Status" />
+				<TableColumn fx:id="colStatus" editable="false" prefWidth="78" text="Status" />
 
 			</columns>
 		</TableView>
-		<AnchorPane layoutY="399.0" prefHeight="80.0" prefWidth="752.0" style="-fx-background-color: #C0C0C0;">
+		<AnchorPane layoutX="1.0" layoutY="399.0" prefHeight="80.0" prefWidth="801.0" style="-fx-background-color: #C0C0C0;">
 			<children>
-				<Button layoutX="41.2" layoutY="18.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="136.0" text="CADASTRAR">
+				<Button layoutX="32.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleCadastrar" prefHeight="44.0" prefWidth="136.0" text="CADASTRAR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>
 				</Button>
-				<Button layoutX="219.4" layoutY="18.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="136.0" text="ALTERAR">
+				<Button layoutX="232.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleAlterar" prefHeight="44.0" prefWidth="136.0" text="ALTERAR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>
 				</Button>
-				<Button layoutX="396.6" layoutY="18.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="136.0" text="APAGAR">
+				<Button layoutX="432.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleDeletar" prefHeight="44.0" prefWidth="136.0" text="APAGAR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>
 				</Button>
-				<Button layoutX="573.8" layoutY="18.0" mnemonicParsing="false" onAction="#handleSair" prefHeight="44.0" prefWidth="136.0" text="SAIR">
+				<Button layoutX="632.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleSair" prefHeight="44.0" prefWidth="136.0" text="SAIR">
 					<font>
 						<Font name="System Bold" size="14.0" />
 					</font>

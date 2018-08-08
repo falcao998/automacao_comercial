@@ -2,7 +2,6 @@ package com.sys.automacao.comercial.view.cliente;
 
 import com.sys.automacao.comercial.dao.service.ClienteDaoService;
 import com.sys.automacao.comercial.model.Cliente;
-import com.sys.automacao.comercial.model.Usuario;
 import com.sys.automacao.comercial.util.ExchangeStage;
 
 import javafx.collections.FXCollections;
@@ -13,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.StageStyle;
 
 public class ClienteListarViewController {
 	
@@ -62,16 +62,35 @@ public class ClienteListarViewController {
 	}
 	
 	@FXML
+	public void handleCadastrar() {
+		exchange.exchange("/com/sys/automacao/comercial/view/cliente/Cliente.fxml", StageStyle.DECORATED,"NOVO CLIENTE",new ClienteViewController(null));
+	}
+	
+	@FXML
+	public void handleAlterar() {
+		if(tableView.getSelectionModel().getSelectedItem() != null)
+			exchange.exchange("/com/sys/automacao/comercial/view/cliente/Cliente.fxml", StageStyle.DECORATED,"NOVO CLIENTE", new ClienteViewController(tableView.getSelectionModel().getSelectedItem()));
+	}
+	
+	@FXML
+	public void handleDeletar() {
+		if(tableView.getSelectionModel().getSelectedItem() != null) {
+//			service.remove(tableView.getSelectionModel().getSelectedItem().getId());
+			preencherTable(textPesquisar.getText());
+		}
+	}
+	
+	@FXML
 	public void initialize() {
 		colId.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("id"));
-		colCodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("matricula"));
+		colCodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("codigo"));
 		colNome.setCellValueFactory(new PropertyValueFactory<Cliente, String>("nome"));
 		colEmail.setCellValueFactory(new PropertyValueFactory<Cliente, String>("email"));
 		colStatus.setCellValueFactory(new PropertyValueFactory<Cliente, String>("status"));
-		colTelefone.setCellValueFactory(new PropertyValueFactory<Cliente, String>("nivel"));
+		colTelefone.setCellValueFactory(new PropertyValueFactory<Cliente, String>("telefone1"));
 		tableView.setOnMouseClicked( event -> {
 			if( event.getClickCount() == 2 ) {
-//				handleAlterar();
+				handleAlterar();
 		}});
 	}
 	

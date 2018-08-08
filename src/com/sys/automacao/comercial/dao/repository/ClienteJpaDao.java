@@ -88,20 +88,4 @@ public class ClienteJpaDao {
 			return false;
 		}
 	}
-	
-	public Usuario findByMatriculaAndSenhaAndStatus(String matricula, String senha, String status) {
-		try {
-			entity = JpaUtil.getEntityManager();
-			String consulta = "select c from Usuario c where c.matricula = :matricula and c.senha = :senha and status = :status";
-			TypedQuery<Usuario> query = entity.createQuery(consulta, Usuario.class);
-			query.setParameter("matricula", matricula);
-			query.setParameter("senha", senha);
-			query.setParameter("status", status);
-			
-			return query.getSingleResult();
-		} catch (Exception e) {
-			return null;
-		}
-	}
-	
 }

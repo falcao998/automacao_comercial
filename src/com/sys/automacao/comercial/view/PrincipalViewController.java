@@ -28,11 +28,20 @@ public class PrincipalViewController {
 		usuarioTela();
 	}
 	
+	@FXML
+	public void hadlerCadastroCliente() {
+		clienteTela();
+	}
+	
 	public void sairTela() {
 		exchangeStage.exchange("/com/sys/automacao/comercial/view/Login.fxml", StageStyle.UNDECORATED, borderPanePrincipal, false, null);
 	}
 	
 	public void usuarioTela() {
 		exchangeStage.exchange("/com/sys/automacao/comercial/view/usuario/UsuarioListar.fxml", StageStyle.DECORATED,"CADASTRO DE USUÁRIO(S)");
+	}
+	
+	public void clienteTela() {
+		exchangeStage.exchange("/com/sys/automacao/comercial/view/cliente/ClienteListar.fxml", StageStyle.DECORATED,"CADASTRO DE CLIENTE(S)");
 	}
 }

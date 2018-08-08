@@ -102,12 +102,19 @@ public class Cliente {
 	@Column(name="INSCRICAO_ESTADUAL")
 	private String inscricaoEstaual;
 	
+	@Column(name="STATUS")
+	private String status;
+	
+	public Cliente() {
+		
+	}
+	
 	public Cliente(Long id, String codigo, String nome, LocalDateTime dataCadastro, String telefone1, String telefone2,
 			String telefone3, String email, String site, Double limiteCredito, String observacao,
 			String vendedorPreferencial, String codigoRegimeTributario, String ibge, byte[] fotoCLiente,
 			LocalDate dataNascimento, String cep, String endereco, String numero, String complemento, String bairro,
 			String cidade, String estado, boolean pessoaFIsica, String cpf, String identidade, String cnpj,
-			String inscricaoEstaual) {
+			String inscricaoEstaual, String status) {
 		super();
 		this.id = id;
 		this.codigo = codigo;
@@ -137,6 +144,7 @@ public class Cliente {
 		this.identidade = identidade;
 		this.cnpj = cnpj;
 		this.inscricaoEstaual = inscricaoEstaual;
+		this.status = status;
 	}
 
 	public String getCodigo() {
@@ -357,6 +365,14 @@ public class Cliente {
 
 	public Long getId() {
 		return id;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 }

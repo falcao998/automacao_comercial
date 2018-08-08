@@ -18,7 +18,7 @@
             	<Menu mnemonicParsing="false" text="Cadastro">
               		<items>
               			<MenuItem mnemonicParsing="false" onAction="#hadlerCadastroUsuario" text="Usúario" />
-                		<MenuItem mnemonicParsing="false" text="Cliente" />
+                		<MenuItem mnemonicParsing="false" onAction="#hadlerCadastroCliente" text="Cliente" />
               		</items>
             	</Menu>
             	<Menu mnemonicParsing="false" text="Venda">

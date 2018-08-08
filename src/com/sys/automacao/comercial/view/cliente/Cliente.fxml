@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
 <AnchorPane prefHeight="778.0" prefWidth="1038.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
-	<!-- TODO Add Nodes -->
+	<children>
+
+      <Label layoutX="51.0" layoutY="31.0" text="Matricula*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfMatricula" layoutX="51.0" layoutY="45.0" prefHeight="25.0" prefWidth="187.0" />
+      
+      <Label layoutX="266.0" layoutY="29.0" text="Nome*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfNome" layoutX="266.0" layoutY="45.0" prefHeight="25.0" prefWidth="433.0" />
+      
+      <Label layoutX="51.0" layoutY="101.0" text="Senha*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfSenha" layoutX="51.0" layoutY="118.0" prefHeight="25.0" prefWidth="187.0" />
+      
+      <Label layoutX="266.0" layoutY="101.0" text="E-mail*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfEmail" layoutX="266.0" layoutY="117.0" prefHeight="25.0" prefWidth="433.0" />
+      
+      <Label layoutX="52.0" layoutY="171.0" text="Status*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbStatus" layoutX="51.0" layoutY="191.0" prefHeight="25.0" prefWidth="187.0" />
+
+      <Label layoutX="266.0" layoutY="171.0" text="Nivel*">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbNivel" layoutX="266.0" layoutY="191.0" prefHeight="25.0" prefWidth="236.0" />
+      
+      <JFXButton fx:id="butSalvar" layoutX="40.0" layoutY="267.0" onAction="#handleSalvar" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SALVAR">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="butSair" layoutX="270.0" layoutY="267.0" onAction="#handleSair" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="SAIR">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+         
+      <JFXButton fx:id="butApagar" disable="true" layoutX="565.0" layoutY="267.0" onAction="#handleDeletar" prefHeight="61.0" prefWidth="178.0" style="-fx-border-width: 3; -fx-border-color: BLACK; -fx-border-radius: 5;" text="APAGAR">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      
+   </children>
 </AnchorPane>
